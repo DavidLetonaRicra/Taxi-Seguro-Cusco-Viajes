@@ -1,234 +1,236 @@
 /* === Paleta institucional === */
 :root {
-    --azul-oscuro: #003399;
-    --blanco: #ffffff;
-    --amarillo: #ffd700;
-    --negro: #000000;
-    --rojo: #ff0000;
-    --verde: #008000;
-    --azul-claro: #e6ecfa;
+  --azul-oscuro: #003399;
+  --blanco: #ffffff;
+  --amarillo: #ffd700;
+  --negro: #000000;
+  --rojo: #ff0000;
+  --verde: #008000;
+  --azul-claro: #e6ecfa;
 }
 
 /* === Estilos generales === */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--blanco);
-    color: var(--negro);
+background: linear-gradient(to bottom right, #bbcff8, #f8f8f8, #b5caf2);
+    background-attachment: fixed;
+    color: #000;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
 /* === Navbar === */
 .navbar {
-    background-color: var(--azul-oscuro);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--azul-oscuro);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand,
 .navbar-nav .nav-link {
-    color: var(--blanco);
-    font-weight: bold;
+  color: var(--blanco);
+  font-weight: bold;
 }
 
 .navbar-nav .nav-link {
-    position: relative;
-    display: inline-block;
-    padding: 10px 15px;
-    transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--amarillo);
-    transform: scale(1.05);
-    border-bottom: 2px solid var(--amarillo);
+  color: var(--amarillo);
+  transform: scale(1.05);
+  border-bottom: 2px solid var(--amarillo);
 }
 
 .navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 2px;
-    background-color: var(--amarillo);
-    transition: width 0.3s ease;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--amarillo);
+  transition: width 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 /* === Fondo con imagen en el header === */
 .bg-image {
-    background-size: cover;
-    background-position: center;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--blanco);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blanco);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .bg-image h1 {
-    font-size: 3rem;
-    font-weight: bold;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .bg-image p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .bg-image a {
-    background-color: var(--amarillo);
-    color: var(--negro);
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    font-weight: bold;
+  background-color: var(--amarillo);
+  color: var(--negro);
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .bg-image a:hover {
-    background-color: #e6c200;
-    transform: scale(1.05);
+  background-color: #e6c200;
+  transform: scale(1.05);
 }
 
 /* === Sección de información === */
 section {
-    padding: 5rem 0;
+  padding: 5rem 0;
 }
 
 .section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--azul-oscuro);
-    text-align: center;
-    margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--azul-oscuro);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .row {
-    text-align: center;
+  text-align: center;
 }
 
 .row .col-md-4 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* === Footer === */
 footer {
-    background-color: var(--azul-oscuro);
-    color: var(--blanco);
-    padding: 20px 0;
-    text-align: center;
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  padding: 20px 0;
+  text-align: center;
 }
 
 footer a {
-    color: var(--amarillo);
-    text-decoration: none;
+  color: var(--amarillo);
+  text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* === Modal (Iniciar sesión) === */
 .modal-content {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .modal-header {
-    background-color: var(--azul-oscuro);
-    color: var(--blanco);
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
 }
 
 .modal-body {
-    background-color: var(--blanco);
-    color: var(--negro);
+  background-color: var(--blanco);
+  color: var(--negro);
 }
 
 /* === Botones personalizados === */
 .btn-amarillo {
-    background-color: var(--amarillo);
-    color: var(--negro);
-    font-weight: bold;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: var(--amarillo);
+  color: var(--negro);
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-amarillo:hover {
-    background-color: #e6c200;
-    transform: scale(1.05);
+  background-color: #e6c200;
+  transform: scale(1.05);
 }
 
 /* === Estilos del formulario === */
 .form-container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 8px;
-    background-color: var(--blanco);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: var(--blanco);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 input,
 .form-control {
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 /* === Efectos hover en tarjetas de servicio === */
 .card-servicio {
-    border: none;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card-servicio:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .card-servicio .card-header {
-    background-color: var(--amarillo);
-    color: var(--negro);
-    font-weight: bold;
-    text-align: center;
+  background-color: var(--amarillo);
+  color: var(--negro);
+  font-weight: bold;
+  text-align: center;
 }
 
 /* === Mejorar legibilidad de texto sobre fondos === */
 .bg-azul-oscuro {
-    background-color: var(--azul-oscuro);
+  background-color: var(--azul-oscuro);
 }
 
 .text-azul-oscuro {
-    color: var(--azul-oscuro);
+  color: var(--azul-oscuro);
 }
 
 .text-amarillo {
-    color: var(--amarillo);
+  color: var(--amarillo);
 }
 
 .text-rojo {
-    color: var(--rojo);
+  color: var(--rojo);
 }
 
 .text-verde {
-    color: var(--verde);
+  color: var(--verde);
 }
 
 .bg-verde {
-    background-color: var(--verde);
-    color: var(--blanco);
+  background-color: var(--verde);
+  color: var(--blanco);
 }
 
 .bg-rojo {
-    background-color: var(--rojo);
-    color: var(--blanco);
+  background-color: var(--rojo);
+  color: var(--blanco);
 }
 
 .text-brand {
-    color: var(--azul-oscuro);
-    font-weight: bold;
+  color: var(--azul-oscuro);
+  font-weight: bold;
 }
 
 /* === Otros ajustes para mejorar la apariencia general === */
@@ -238,62 +240,92 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: bold;
-    margin-bottom: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 /* === Mejorar la visibilidad del contenido principal === */
 .text-center {
-    text-align: center;
-    color: var(--azul-oscuro);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: var(--azul-oscuro);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* === Estilos específicos para el login del administrador === */
 .bg-dark-custom {
-    background-color: #c4d4f3;
-    /* Azul oscuro */
+  background-color: #c4d4f3;
+  /* Azul oscuro */
 }
 
 .card {
-    border-radius: 8px;
+  border-radius: 8px;
 }
 
 .card-shadow {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
 .contact-section {
-    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-    /* Fondo más claro y elegante */
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  /* Fondo más claro y elegante */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .contact-section h2 {
-    color: #003399;
-    /* Azul oscuro solo en título */
+  color: #003399;
+  /* Azul oscuro solo en título */
 }
 
 .text-brand {
-    color: #003399;
+  color: #003399;
 }
 
 .social-icons a {
-    color: #003399;
-    transition: transform 0.2s ease-in-out;
+  color: #003399;
+  transition: transform 0.2s ease-in-out;
 }
 
 .social-icons a:hover {
-    transform: scale(1.2);
-    color: #FFD700;
-    /* Amarillo al pasar el mouse */
+  transform: scale(1.2);
+  color: #ffd700;
+  /* Amarillo al pasar el mouse */
 }
 
 .text-brand {
-    color: #003399;
-    font-weight: bold;
+  color: #003399;
+  font-weight: bold;
+}
+
+/*estilo de whatsaap*/
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/*estilos de redes sociales*/
+.social-icon i {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover i {
+  transform: scale(1.2);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }

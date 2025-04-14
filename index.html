@@ -79,16 +79,16 @@
     </div>
 
     <!-- HEADER CON FONDO -->
-    <header class="bg-image text-white text-center py-5">
+    <header class="bg-image text-center py-5">
         <div class="container">
             <h1 class="display-4 fw-bold">Explora Cusco con Seguridad</h1>
             <p class="lead">Viajes turísticos privados con asignación manual de conductores</p>
             <!-- Cambiar el enlace a un botón que abrirá el modal -->
-            <button class="btn btn-amarillo btn-lg mt-3" data-bs-toggle="modal"
-                data-bs-target="#reservationModal">Reservar
-                Ahora</button>
+            <button class="btn btn-amarillo btn-lg mt-3 text-black" data-bs-toggle="modal"
+                data-bs-target="#reservationModal">Reservar Ahora</button>
         </div>
     </header>
+
     <!-- Modal de Reserva Completa -->
     <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel"
         aria-hidden="true">
@@ -160,8 +160,47 @@
         </div>
     </div>
 
+    <section class="servicios-destacados py-5">
+        <div class="container text-center">
+            <h2 class="text-brand mb-5">Nuestros Servicios</h2>
+            <div class="row g-4">
+                <!-- Taxi Turístico -->
+                <div class="col-md-6">
+                    <div class="card shadow rounded-4">
+                        <div class="card-body">
+                            <h4 class="card-title text-azul-oscuro">Taxi Turístico</h4>
+                            <p class="card-text">Disfruta de un viaje exclusivo por los principales destinos turísticos
+                                de
+                                Cusco. Con un servicio personalizado, cómodo y seguro, podrás conocer los lugares más
+                                emblemáticos con un conductor experto.</p>
+                            <a href="/pages/destinos.html" class="btn btn-amarillo">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Taxi Exclusivo -->
+                <div class="col-md-6">
+                    <div class="card shadow rounded-4">
+                        <div class="card-body">
+                            <h4 class="card-title text-azul-oscuro">Taxi Exclusivo</h4>
+                            <p class="card-text">Viaja de forma privada y exclusiva. Nuestro servicio de taxi es ideal
+                                para
+                                quienes desean comodidad y privacidad. Ya sea para un viaje en la ciudad o un tour
+                                personalizado, ofrecemos la mejor atención.</p>
+                            <a href="/pages/destinos.html" class="btn btn-amarillo">Más información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
     <!-- SECCIÓN INFORMATIVA -->
-    <section class="py-5 text-center">
+    <section class="py-2 text-center">
         <div class="container">
             <h2 class="text-brand">¿Por qué elegirnos?</h2>
             <p class="lead">Ofrecemos traslados privados, seguros y personalizados a los principales destinos turísticos
@@ -183,7 +222,7 @@
         </div>
     </section>
 
-    <footer class="azul-oscuro text-white text-center py-4">
+    <footer class="azul-oscuro text-white text-center py-2">
         <p class="mb-0">&copy; 2025 Taxi Seguro Cusco Viajes | Todos los derechos reservados</p>
         <p class="mt-1">
             <a href="/admin/login_admin.html" class="text-warning text-decoration-none small">Panel de
@@ -191,7 +230,14 @@
         </p>
     </footer>
 
+    <!-- BOTON WHATTSAAP -->
+    <a href="https://wa.me/51910406090?text=Hola%2C%20quisiera%20más%20información%20sobre%20sus%20tours"
+        class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 
 </html>

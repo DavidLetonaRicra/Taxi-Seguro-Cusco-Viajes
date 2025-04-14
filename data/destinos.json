@@ -120,5 +120,33 @@
       "Todas las cancelaciones deben realizarse con al menos 5 días de anticipación y tienen una penalización del 50%.",
       "En caso de que la cancelación se comunique en el último momento la penalización es del 100%."
     ]
+  },
+  {
+    "id": 6,
+    "nombre": "Laguna Humantay",
+    "descripcion": "Disfruta de una caminata hacia una de las lagunas más impresionantes del Perú, rodeada de montañas nevadas.",
+    "descripcion_larga": "Si lo tuyo es disfrutar de la naturaleza y el trekking, este lugar es ideal. Humantay es una montaña revestida de nieve que forma parte de la cordillera andina y da origen a esta espléndida laguna de color turquesa. Con un aire místico, la laguna es visitada por chamanes y turistas de todo el mundo para dejar ofrendas a la Pachamama. Según los pobladores, el nevado Humantay es el hijo menor del Apu Salkantay, y ambos distribuyen el agua de sus nieves a las comunidades cercanas.",
+    "imagen": "../img/laguna_humantay.jpg",
+    "itinerario": [
+      "4:30 - 5:00 am Recojo en el hotel en Cusco",
+      "Viaje por Limatambo y Mollepata",
+      "Desayuno en Mollepata",
+      "Llegada a Soraypampa e inicio de la caminata",
+      "2 horas de caminata hasta la Laguna Humantay",
+      "Tiempo libre para disfrutar del paisaje y tomar fotos",
+      "Regreso por la misma ruta hasta Soraypampa",
+      "Almuerzo en Mollepata",
+      "Retorno a Cusco (6:30 pm aprox.)"
+    ],
+    "condiciones_reserva": [
+      "Incluye recojo del hotel en Cusco",
+      "Transporte turístico de ida y vuelta",
+      "Desayuno y almuerzo buffet incluidos",
+      "Ingreso a la Laguna Humantay"
+    ],
+    "condiciones_cancelacion": [
+      "Todas las cancelaciones deben realizarse con al menos 5 días de anticipación y tienen una penalización del 50%.",
+      "En caso de que la cancelación se comunique en el último momento la penalización es del 100%."
+    ]
   }
 ]
