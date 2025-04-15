@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Taxi Seguro Cusco Viajes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/estilos.css" />
+</head>
+
+<body style="background-color: #f4f4f9;">
+
+    <!-- Contenedor del formulario -->
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="form-container p-4 rounded shadow-sm"
+            style="background-color: #ffffff; width: 100%; max-width: 500px;">
+            <h2 class="text-center mb-4 text-brand">Crear Cuenta</h2>
+            <form action="procesar_registro.php" method="POST">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirm_password" class="form-label">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-amarillo btn-lg">Registrar</button>
+                </div>
+            </form>
+            <p class="text-center mt-3">¿Ya tienes cuenta? <a href="../index.html" class="text-decoration-none">Inicia
+                    sesión aquí</a></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- FOOTER -->
+    <footer class="azul-oscuro text-white text-center py-4 mt-5">
+        <p class="mb-0">&copy; 2025 Taxi Seguro Cusco Viajes | Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>

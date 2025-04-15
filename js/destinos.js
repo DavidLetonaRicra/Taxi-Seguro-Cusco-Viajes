@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('../data/destinos.json')
+    fetch('data/destinos.json')
         .then(response => response.json())
         .then(data => mostrarDestinos(data))
         .catch(error => console.error('Error cargando destinos:', error));
 });
 
 function mostrarDestinos(destinos) {
-    const contenedor = document.querySelector('.row.g-4');
+    const contenedor = document.getElementById('destinosContainer');
     contenedor.innerHTML = '';
 
     destinos.forEach(destino => {

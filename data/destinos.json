@@ -4,7 +4,7 @@
     "nombre": "Tour de Día Completo al Valle Sagrado",
     "descripcion": "Explora Pisaq, Ollantaytambo y Chinchero en un recorrido inolvidable por el Valle Sagrado.",
     "descripcion_larga": "El tour al Valle Sagrado de los Incas ofrece una experiencia verdaderamente sensacional, llevándote a través de paisajes impresionantes, pueblos encantadores y sitios arqueológicos ricos en historia y significado. Explorarás los Parques Arqueológicos de Pisaq, Ollantaytambo y Chinchero, donde podrás admirar el patrimonio cultural. En Urubamba disfrutarás de un almuerzo buffet con ingredientes locales. ¡Prepárate para un día lleno de experiencias inolvidables!",
-    "imagen": "../img/valle_sagrado.jpg",
+    "imagen": "img/valle_sur.jpg",
     "itinerario": [
       "7:30 am Recogida en el hotel",
       "9:00 am Pisac",
@@ -29,7 +29,7 @@
     "nombre": "Qeswachaka - Puente Colgante Inca",
     "descripcion": "El tour comienza temprano con la recogida en el hotel, visitando pueblos andinos y el circuito de las 4 Lagunas antes de llegar al Qeswachaka, el último puente artesanal inca.",
     "descripcion_larga": "El tour comienza temprano con la recogida en el hotel. Recorreremos pintorescos pueblos andinos, admirando impresionantes paisajes llenos de flora y fauna autóctona. Antes de llegar al Qeswachaka, el famoso puente colgante de fibra vegetal ubicado en el distrito de Quehue, visitaremos el impresionante circuito de las 4 Lagunas, donde podrá disfrutar de increíbles vistas panorámicas. Al llegar al Puente Qeswachaka, reconstruido cada año con técnicas ancestrales, tendrá la oportunidad de cruzarlo y recorrer el mismo camino que antaño usaron los incas. ¡Únase a este viaje y descubra el último puente artesanal inca!",
-    "imagen": "../img/queshuachaca.jpg",
+    "imagen": "img/queshuachaca.jpg",
     "itinerario": [
       "5:00 am Recogida en el hotel",
       "7:00 am Desayuno",
@@ -53,7 +53,7 @@
     "nombre": "Palccoyo - Montaña Arcoíris",
     "descripcion": "Una excelente alternativa para los amantes de la naturaleza es la Montaña Palccoyo.",
     "descripcion_larga": "Iniciamos con un recojo muy temprano en el hotel, nos dirigiremos al distrito de Cusipata, donde disfrutaremos de un reconfortante y nutritivo desayuno, para luego continuar con el viaje, hasta llegar a la Cordillera de Colores Palccoyo. Al llegar, iniciaremos una caminata de 30 minutos, hasta llegar al Mirador donde podremos observar tres montañas de colores, así como el bosque de piedras, teniendo el tiempo ideal para realizar nuestra excursión y tomar las respectivas fotos para luego retornar a la ciudad del Cusco.",
-    "imagen": "../img/palccoyo.jpg",
+    "imagen": "img/palccoyo.jpg",
     "itinerario": [
       "5:00 am Recogida en el hotel",
       "7:00 am Desayuno en Cusipata",
@@ -77,7 +77,7 @@
     "nombre": "Montaña de 7 Colores Vinicunca – Montaña de 7 Colores Día Completo",
     "descripcion": "Descubre la maravillosa Montaña de los 7 Colores de Vinicunca, un tesoro escondido en la provincia de Canchis.",
     "descripcion_larga": "Nuestra aventura comenzará temprano, preparándonos para ascender a 5.200 metros sobre el nivel del mar. Este viaje no solo nos lleva a través de paisajes cubiertos de nieve sino también cerca de la montaña arcoíris. La montaña Vinicunca, también conocida como montaña de siete colores, es uno de los atractivos turísticos más fotogénicos de Cusco.",
-    "imagen": "../img/vinicunca.jpg",
+    "imagen": "img/vinicunca.jpg",
     "itinerario": [
       "5:00 am Recogida en el hotel",
       "8:00 am Desayuno en Cusipata",
@@ -102,7 +102,7 @@
     "nombre": "Tour Valle Sur 1 Día – Tipón – Pikillaqta – Andahuaylillas",
     "descripcion": "Visita los sitios arqueológicos de Tipón, Pikillaqta y la Capilla Sixtina de América en este recorrido por el Valle Sur.",
     "descripcion_larga": "Este tour es una de las experiencias más visitadas en Cusco, se encuentra justo al sur de Cusco, consiste en visitar los sitios arqueológicos de: Tipón, el cual posee arquitectura hidráulica de la época Inca, continuando nuestro recorrido visitaremos Pikillaqta, una magnífica construcción preinca, donde tendremos la oportunidad de tomar increíbles fotos, y finalmente visitaremos Andahuaylillas, donde se encuentra la Capilla Sixtina de América, famosa por albergar las impresionantes obras de arte de la escuela cusqueña.\n\nAdemás, dentro de este recorrido, podremos visitar el pueblo de Oropesa, conocido por su famoso pan chuta y su elaboración mediante hornos artesanales y por supuesto su gran variedad y sabor de panes.",
-    "imagen": "../img/valle_sur.jpg",
+    "imagen": "img/valle_sur.jpg",
     "itinerario": [
       "8:30 am Recogida en el hotel",
       "9:30 am Visita al sitio arqueológico de Tipón",
@@ -126,7 +126,7 @@
     "nombre": "Laguna Humantay",
     "descripcion": "Disfruta de una caminata hacia una de las lagunas más impresionantes del Perú, rodeada de montañas nevadas.",
     "descripcion_larga": "Si lo tuyo es disfrutar de la naturaleza y el trekking, este lugar es ideal. Humantay es una montaña revestida de nieve que forma parte de la cordillera andina y da origen a esta espléndida laguna de color turquesa. Con un aire místico, la laguna es visitada por chamanes y turistas de todo el mundo para dejar ofrendas a la Pachamama. Según los pobladores, el nevado Humantay es el hijo menor del Apu Salkantay, y ambos distribuyen el agua de sus nieves a las comunidades cercanas.",
-    "imagen": "../img/laguna_humantay.jpg",
+    "imagen": "img/laguna_humantay.jpg",
     "itinerario": [
       "4:30 - 5:00 am Recojo en el hotel en Cusco",
       "Viaje por Limatambo y Mollepata",
