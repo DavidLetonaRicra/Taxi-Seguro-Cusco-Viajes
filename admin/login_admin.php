@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login Administrador | Taxi Seguro Cusco Viajes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../style/estilos.css"> <!-- Referencia a la hoja de estilos común -->
+    <link rel="stylesheet" href="estilo_admin.css"> <!-- Referencia a la hoja de estilos común -->
 </head>
 
 <body class="bg-dark-custom d-flex align-items-center justify-content-center" style="height: 100vh;">
@@ -27,7 +27,9 @@
             <div class="d-grid">
                 <button type="submit" class="btn btn-amarillo">Ingresar</button>
             </div>
+            
         </form>
+
 
 
     </div>

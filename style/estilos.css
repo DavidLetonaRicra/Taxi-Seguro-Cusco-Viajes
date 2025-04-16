@@ -11,13 +11,14 @@
 
 /* === Estilos generales === */
 body {
-background: linear-gradient(to bottom right, #bbcff8, #f8f8f8, #b5caf2);
-    background-attachment: fixed;
-    color: #000;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+  background: linear-gradient(to bottom right, #bbcff8, #f8f8f8, #b5caf2);
+  background-attachment: fixed;
+  color: #000;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
 /* === Navbar === */
 .navbar {
   background-color: var(--azul-oscuro);

@@ -2,7 +2,7 @@
 require_once('../config/db.php');
 
 // Obtener todos los clientes
-$sql = "SELECT * FROM clientes";  // Suponiendo que tienes una tabla "clientes"
+$sql = "SELECT * FROM usuarios";  // Suponiendo que tienes una tabla "clientes"
 $resultado = $conexion->query($sql);
 ?>
 
@@ -11,7 +11,7 @@ $resultado = $conexion->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Gestión de Clientes</title>
-    <link rel="stylesheet" href="../style/estilos.css">
+    <link rel="stylesheet" href="estilo_admin.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-dark text-white p-4">
@@ -42,6 +42,10 @@ $resultado = $conexion->query($sql);
             </tbody>
         </table>
     </div>
+    <!-- Botón para regresar al panel de administración -->
+    <a href="panel_admin.php" class="btn btn-secondary mb-4 regresar-btn">
+        <i class="bi bi-arrow-left-circle"></i> Regresar al Panel de Administración
+    </a>
 
 </body>
 </html>

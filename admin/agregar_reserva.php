@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Agregar Reserva | Panel Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../style/estilos.css">
+    <link rel="stylesheet" href="estilo_admin.css">
 </head>
 <body class="bg-dark text-white">
     <div class="container mt-5">
