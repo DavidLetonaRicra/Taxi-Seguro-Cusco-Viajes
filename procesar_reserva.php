@@ -1,54 +1,49 @@
 <?php
 session_start();
 
-// Verifica que el cliente esté logueado
-if (!isset($_SESSION['id_cliente'])) {
-    header("Location: index.php"); // o login.php
-    exit();
-}
-
-// Conexión a la base de datos
-$conexion = new mysqli("localhost", "root", "", "taxi_seguro_cusco");
-
-if ($conexion->connect_error) {
-    die("Error de conexión: " . $conexion->connect_error);
-}
-
-// Obtener datos del formulario
-$origen = $_POST['origin'];
-$destino = $_POST['destination'];
-$fecha = $_POST['pickupDate'];
-$hora = $_POST['pickupTime'];
-$num_personas = $_POST['numPeople'];
-$comentarios = $_POST['additionalComments'];
-
-// ID del cliente desde sesión
-$id_cliente = $_SESSION['id_cliente'];
-
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-exit;
-
-
-
-
-
-// Insertar en la tabla de reservas
-$sql = "INSERT INTO reservas (id_cliente, origen, destino, fecha, hora, numero_personas, comentarios, estado)
-        VALUES (?, ?, ?, ?, ?, ?, ?, 'pendiente')";
-
-
-$stmt = $conexion->prepare($sql);
-$stmt->bind_param("issssis", $id_cliente, $origen, $destino, $fecha, $hora, $numero_personas, $comentarios);
-
-if ($stmt->execute()) {
-    // Redirige con mensaje de éxito (puedes mostrar un modal en el index si quieres)
-    header("Location: index.php?reserva=exitosa");
+if (file_exists('includes/db_connection.php')) {
+    require_once 'includes/db_connection.php';
 } else {
-    echo "Error al guardar la reserva: " . $conexion->error;
+    die("El archivo db_connection.php no se encuentra.");
 }
 
-$stmt->close();
-$conexion->close();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Recuperar los datos del formulario
+    $origen = $_POST['origin'] ?? '';
+    $destino = $_POST['destination'] ?? '';
+    $fecha = $_POST['pickupDate'] ?? '';
+    $hora = $_POST['pickupTime'] ?? '';
+    $personas = $_POST['numPeople'] ?? 1;
+    $comentarios = $_POST['additionalComments'] ?? '';
+
+    // Verificar campos requeridos
+    if (!empty($origen) && !empty($destino) && !empty($fecha) && !empty($hora)) {
+        // Insertar SOLO los campos que el usuario llena
+        $sql = "INSERT INTO reservas (origen, destino, fecha_reserva, hora_reserva, numero_personas, comentarios)
+                VALUES (?, ?, ?, ?, ?, ?)";
+
+        try {
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$origen, $destino, $fecha, $hora, $personas, $comentarios]);
+
+            if ($stmt->rowCount() > 0) {
+                header("Location: index.php?reserva=ok");
+                exit;
+            } else {
+                echo "No se pudo registrar la reserva.";
+            }
+        } catch (PDOException $e) {
+            echo "Error en la base de datos: " . $e->getMessage();
+        }
+    } else {
+        echo "Faltan campos requeridos.";
+    }
+} else {
+    header("Location: index.php");
+    exit;
+}
 ?>

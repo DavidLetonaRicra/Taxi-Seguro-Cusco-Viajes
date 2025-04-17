@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login Administrador | Taxi Seguro Cusco Viajes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="estilo_admin.css"> <!-- Referencia a la hoja de estilos común -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body class="bg-dark-custom d-flex align-items-center justify-content-center" style="height: 100vh;">
+<body class="bg-light d-flex align-items-center justify-content-center vh-100">
 
-    <div class="card shadow-lg p-4 card-shadow" style="width: 100%; max-width: 400px;">
-        <h4 class="text-center text-amarillo mb-4">Panel de Administración</h4>
+    <!-- Icono de salida con Tooltip -->
+    <a href="../index.php" class="position-absolute top-0 end-0 p-3 text-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Regresar al inicio">
+        <i class="bi bi-x-circle fs-1"></i>
+    </a>
+
+    <!-- Tarjeta de Login -->
+    <div class="card shadow-lg p-4 w-100" style="max-width: 400px;">
+        <h4 class="text-center text-primary mb-4">Panel de Administración</h4>
 
         <!-- Formulario de inicio de sesión -->
         <form action="verificar_admin.php" method="POST">
@@ -25,29 +32,31 @@
                 <input type="password" class="form-control" id="contrasena" name="contrasena" required>
             </div>
             <div class="d-grid">
-                <button type="submit" class="btn btn-amarillo">Ingresar</button>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
             </div>
-            
         </form>
-
-
-
     </div>
-    
+
+    <!-- Mensajes de error -->
     <div class="mt-3">
         <?php if (isset($_GET['error'])): ?>
-            <div class="mt-3">
+            <div class="alert alert-danger text-center">
                 <?php if ($_GET['error'] == 'user-not-found'): ?>
-                    <div class="alert alert-danger text-center">El usuario no fue encontrado.</div>
+                    El usuario no fue encontrado.
                 <?php elseif ($_GET['error'] == 'incorrect-password'): ?>
-                    <div class="alert alert-danger text-center">La contraseña es incorrecta.</div>
+                    La contraseña es incorrecta.
                 <?php endif; ?>
             </div>
         <?php endif; ?>
-</div>
+    </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Activar los tooltips de Bootstrap
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
 
 </body>
 

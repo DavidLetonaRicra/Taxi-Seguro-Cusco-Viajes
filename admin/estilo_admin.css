@@ -1,228 +1,147 @@
-/* ==== Fondo General y Tipografía ==== */
+/* ===== ESTILO CLARO Y MODERNO ===== */
+
+/* ==== Fondo General ==== */
 body {
-    background-color: #0a0a0a;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 30px 15px;
+    background-color: #ffffff;
+    /* Blanco puro para el fondo */
+    color: #4a4a4a;
+    /* Gris oscuro para el texto */
+    font-family: 'Poppins', sans-serif;
+    padding: 30px 20px;
 }
 
-/* ==== Contenedor Principal ==== */
+/* ==== Contenedor central ==== */
 .container {
     max-width: 1200px;
     margin: auto;
+    background-color: #f8f9fa;
+    /* Gris claro para contenedor */
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
 }
 
-/* ==== Título ==== */
+/* ==== Título principal ==== */
 h2 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-weight: 700;
-    color: #FFD700;
-    border-bottom: 2px solid #FFD700;
+    color: #FF7F50;
+    /* Coral suave */
+    border-bottom: 3px solid #8BC34A;
+    /* Verde menta */
+    margin-bottom: 30px;
     padding-bottom: 10px;
-    margin-bottom: 40px;
 }
 
-/* ==== Tarjetas Admin ==== */
+/* ==== Tarjetas ==== */
 .admin-card {
-    background-color: #1c1c1c;
-    border: 1px solid #333;
-    border-radius: 15px;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+    /* Fondo blanco */
+    border: 1px solid #e0e0e0;
+    /* Gris suave para bordes */
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: 0.2s ease;
 }
 
 .admin-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.25);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-/* ==== Contenido Tarjeta ==== */
-.card-body {
-    padding: 30px;
-    color: #ffffff;
+/* ==== Tabla con nuevo diseño ==== */
+.table {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card-title {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin: 15px 0 20px;
-    color: #FFD700;
+.table thead {
+    background-color: #f2f4f8;
+    /* Azul claro */
+    color: #FF7F50;
+    /* Coral */
 }
 
-.card-icon {
-    font-size: 3.5rem;
-    color: #FFD700;
+.table th,
+.table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-/* ==== Botones Personalizados ==== */
-.btn-custom {
-    
+.table tbody tr:hover {
+    background-color: #f1f8f3;
+    /* Verde menta suave */
+}
+
+/* ==== Botones Estéticos ==== */
+.btn {
+    border: none;
+    padding: 12px 24px;
     border-radius: 25px;
-    padding: 10px 18px;
     font-weight: 600;
-    transition: 0.3s;
-    margin: 5px 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 8px;
+    transition: 0.2s ease;
 }
 
-.btn-custom:hover {
-    transform: scale(1.05);
+/* Botón de Confirmar */
+.btn-confirmar {
+    background-color: #8BC34A;
+    /* Verde menta */
+    color: white;
 }
 
-.btn-outline-danger {
-    border-color: #ff4d4d;
-    color: #ff4d4d;
+.btn-confirmar:hover {
+    background-color: #7cb342;
+    /* Verde más oscuro */
 }
 
-.btn-outline-danger:hover {
-    background-color: #ff4d4d;
-    color: #fff;
+/* Botón de Cancelar */
+.btn-cancelar {
+    background-color: #FF6F61;
+    /* Coral */
+    color: white;
 }
 
-/* ==== Ajustes de texto y espaciado ==== */
-.text-end {
-    margin-bottom: 20px;
+.btn-cancelar:hover {
+    background-color: #e55d4e;
+    /* Coral más oscuro */
 }
 
-a {
-    text-decoration: none !important;
-}
-
-
-
-/* ===== Estilos exclusivos para LOGIN DE ADMINISTRADOR ===== */
-
-.bg-dark-custom {
-    background-color: #0a0a0a !important;
-}
-
-.card-shadow {
-    background-color: #1c1c1c;
-    border: 1px solid #333;
-    border-radius: 15px;
-    box-shadow: 0 4px 25px rgba(255, 215, 0, 0.2);
-}
-
-.text-amarillo {
-    color: #FFD700 !important;
-}
-
-.btn-amarillo {
+/* Botón de Editar */
+.btn-editar {
     background-color: #FFD700;
-    color: #000;
-    font-weight: bold;
-    border-radius: 25px;
-    padding: 10px;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+    /* Amarillo suave */
+    color: #4a4a4a;
+    /* Gris oscuro */
 }
 
-.btn-amarillo:hover {
+.btn-editar:hover {
     background-color: #e6c200;
-    transform: scale(1.05);
+    /* Amarillo brillante */
 }
 
-.form-label {
-    font-weight: 600;
-}
-
-.alert {
-    font-size: 0.9rem;
-    border-radius: 8px;
-}
-
-/* Responsivo extra */
-@media (max-width: 576px) {
-    .card-shadow {
+/* ==== Responsivo ==== */
+@media (max-width: 768px) {
+    .container {
         padding: 20px;
     }
-}
 
-
-.regresar-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    color: #007bff;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.regresar-btn:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-.container {
-    position: relative;
-}
-
-
-
-/* Estilos para la barra lateral (sidebar) */
-.sidebar {
-    height: 100vh;
-    background-color: #1c1c1c;
-    padding-top: 30px;
-    position: fixed;
-    width: 220px;
-    top: 0;
-    left: 0;
-    box-shadow: 2px 0 10px rgba(255, 215, 0, 0.1);
-}
-
-.sidebar a {
-    display: block;
-    padding: 15px 20px;
-    color: #FFD700;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-.sidebar a:hover {
-    background-color: #FFD700;
-    color: #000;
-}
-
-.main-content {
-    margin-left: 240px;
-    padding: 40px 30px;
-}
-
-/* Estilo para el botón de logout */
-.logout-btn {
-    position: absolute;
-    bottom: 30px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Estilos responsivos para pantallas pequeñas */
-@media (max-width: 768px) {
-    .sidebar {
-        display: none;
+    .table th,
+    .table td {
+        font-size: 0.9rem;
+        padding: 12px;
     }
 
-    .main-content {
-        margin-left: 0;
-        padding: 20px 15px;
+    h2 {
+        font-size: 1.8rem;
     }
-}
-
-/* Estilo para el botón de regresar al panel de admin */
-.regresar-btn {
-    margin-bottom: 20px;
-    background-color: #6c757d;
-    color: white;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.regresar-btn:hover {
-    background-color: #5a6268;
-    text-decoration: none;
 }

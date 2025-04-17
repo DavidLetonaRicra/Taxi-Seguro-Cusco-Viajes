@@ -10,13 +10,17 @@ if ($mysqli->connect_error) {
     die("Conexión fallida: " . $mysqli->connect_error);
 }
 
-var_dump($usuario); // Para ver qué valor tiene la variable $usuario
-
-
 // Verificar si se enviaron los datos por POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Recibir los datos del formulario
     $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];
+
+    // Validar que los campos no estén vacíos
+    if (empty($usuario) || empty($contrasena)) {
+        header("Location: login_admin.php?error=empty-fields");
+        exit();
+    }
 
     // Preparar la consulta para buscar al usuario en la base de datos
     $stmt = $mysqli->prepare("SELECT * FROM administradores WHERE usuario = ?");
@@ -29,9 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $admin = $result->fetch_assoc();
 
         // Verificar la contraseña
-        if (password_verify($contrasena, $admin['contrasena'])) {
+        if (password_verify($contrasena, $admin['clave'])) {
             // La contraseña es correcta, iniciar sesión
-            $_SESSION['admin_id'] = $admin['id'];
+            $_SESSION['admin_id'] = $admin['id_admin'];  // Asegúrate que el campo sea 'id_admin'
             $_SESSION['usuario'] = $admin['usuario'];
 
             // Redirigir al panel de administración

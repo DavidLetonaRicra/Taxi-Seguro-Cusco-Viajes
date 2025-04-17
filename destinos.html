@@ -34,62 +34,9 @@
         </div>
     </nav>
 
-    <!-- Modal de Iniciar Sesión -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="procesar_login.php" method="post">
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-amarillo">Iniciar Sesión</button>
-                        </div>
-                    </form>
-                    <hr>
-                    <p class="text-center mt-3"><a href="registro.html">¿No tienes cuenta? Regístrate aquí.</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Modal para mostrar detalles del destino -->
-    <div class="modal fade" id="modalDetallesDestino" tabindex="-1" aria-labelledby="modalDetallesLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalDetallesLabel">Detalles del destino</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <img id="modal-img" src="" class="img-fluid rounded mb-3" alt="">
-                    <h5 id="modal-titulo" class="text-brand"></h5>
-                    <p id="modal-descripcion"></p>
-                    <h6>Itinerario</h6>
-                    <ul id="modal-itinerario"></ul>
-                    <h6>Condiciones de reserva</h6>
-                    <ul id="modal-reserva"></ul>
-                    <h6>Condiciones de cancelación</h6>
-                    <ul id="modal-cancelacion"></ul>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Contenedor de destinos -->
-    <section class="container my-5">
+    <section class="container">
         <h2 class="mb-4 text-center">Nuestros Destinos</h2>
         <div class="row g-4" id="destinosContainer">
             <!-- Las tarjetas de destinos se cargarán aquí -->
@@ -137,6 +84,35 @@
             </form>
         </div>
     </div>
+
+
+    <!-- Modal de Detalles del Destino -->
+    <div class="modal fade" id="modalDetallesDestino" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-titulo">Título del destino</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-img" src="" class="img-fluid mb-3" alt="Imagen del destino">
+                    <p id="modal-descripcion"></p>
+                    <h6>🧭 Itinerario:</h6>
+                    <ul id="modal-itinerario"></ul>
+                    <h6>✅ Condiciones de Reserva:</h6>
+                    <ul id="modal-reserva"></ul>
+                    <h6>❌ Condiciones de Cancelación:</h6>
+                    <ul id="modal-cancelacion"></ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <!-- BOTON WHATTSAAP -->
     <a href="https://wa.me/51910406090?text=Hola%2C%20quisiera%20más%20información%20sobre%20sus%20tours"

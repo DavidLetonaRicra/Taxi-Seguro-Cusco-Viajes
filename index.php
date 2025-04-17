@@ -1,6 +1,6 @@
 <?php
 session_start();
-$clienteLogueado = isset($_SESSION['id_cliente']);
+$clienteLogueado = isset($_SESSION['user']);
 ?>
 
 
@@ -87,74 +87,74 @@ $clienteLogueado = isset($_SESSION['id_cliente']);
     </header>
 
 
-    <!-- Modal de Reserva Completa -->
-    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="reservationModalLabel">Reserva tu Viaje</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="reservationForm" action="procesar_reserva.php" method="POST">
-                        <!-- Origen y Destino -->
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="origin" class="form-label">Origen</label>
-                                <input type="text" class="form-control" id="origin" name="origin" required
-                                    placeholder="Ej. Plaza de Armas">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="destination" class="form-label">Destino</label>
-                                <input type="text" class="form-control" id="destination" name="destination" required
-                                    placeholder="Ej. Machu Picchu">
-                            </div>
+
+                                                <!-- Modal de Reserva Completa -->
+            <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="reservationModalLabel">Reserva tu viaje</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                         </div>
+                        <div class="modal-body">
+                            <form id="reservationForm" action="procesar_reserva.php" method="POST">
+                                <!-- Origen y Destino -->
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="origin" class="form-label">Origen</label>
+                                        <input type="text" class="form-control" id="origin" name="origin" required
+                                            placeholder="Ej. Plaza de Armas">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="destination" class="form-label">Destino</label>
+                                        <input type="text" class="form-control" id="destination" name="destination" required
+                                            placeholder="Ej. Machu Picchu">
+                                    </div>
+                                </div>
 
-                        <!-- Fecha y Hora -->
-                        <div class="row g-3 mt-3">
-                            <div class="col-md-6">
-                                <label for="pickupDate" class="form-label">Fecha</label>
-                                <input type="date" class="form-control" id="pickupDate" name="pickupDate" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="pickupTime" class="form-label">Hora</label>
-                                <input type="time" class="form-control" id="pickupTime" name="pickupTime" required>
-                            </div>
+                                <!-- Fecha y Hora -->
+                                <div class="row g-3 mt-3">
+                                    <div class="col-md-6">
+                                        <label for="pickupDate" class="form-label">Fecha</label>
+                                        <input type="date" class="form-control" id="pickupDate" name="pickupDate" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="pickupTime" class="form-label">Hora</label>
+                                        <input type="time" class="form-control" id="pickupTime" name="pickupTime" required>
+                                    </div>
+                                </div>
+
+                                <!-- Número de Personas -->
+                                <div class="mt-3">
+                                    <label for="numPeople" class="form-label">Número de personas</label>
+                                    <input type="number" class="form-control" id="numPeople" name="numPeople" min="1" required
+                                        placeholder="1 persona">
+                                </div>
+
+                                <!-- Comentarios Adicionales -->
+                                <div class="mt-3">
+                                    <label for="additionalComments" class="form-label">Comentarios adicionales</label>
+                                    <textarea class="form-control" id="additionalComments" name="additionalComments" rows="3"
+                                        placeholder="Ej. Necesito un asiento para niño, viajo con mascotas, etc."></textarea>
+                                </div>
+
+                                <!-- Botón de Confirmación -->
+                                <div class="d-grid gap-2 mt-4">
+                                    <?php if (isset($_SESSION['user'])): ?>
+                                        <button type="submit" class="btn btn-amarillo">Reservar viaje</button>
+                                    <?php else: ?>
+                                        <button type="button" class="btn btn-amarillo" data-bs-toggle="modal" data-bs-target="#loginModal">Inicia sesión para reservar</button>
+                                    <?php endif; 
+                                    error_reporting(E_ALL);
+                                    ini_set('display_errors', 1);       
+                                    ?>
+                                </div>
+                            </form>
                         </div>
-
-                        <!-- Número de Personas -->
-                        <div class="mt-3">
-                            <label for="numPeople" class="form-label">Número de Personas</label>
-                            <input type="number" class="form-control" id="numPeople" name="numPeople" min="1" required
-                                placeholder="1 Persona">
-                        </div>
-
-                        <!-- Comentarios Adicionales -->
-                        <div class="mt-3">
-                            <label for="additionalComments" class="form-label">Comentarios Adicionales</label>
-                            <textarea class="form-control" id="additionalComments" name="additionalComments" rows="3"
-                                placeholder="Ej. Necesito un asiento para niño, o viaje con mascotas..."></textarea>
-                        </div>
-
-                        <!-- Botón de Confirmación -->
-                        <div class="d-grid gap-2 mt-4">
-                            <?php if (isset($_SESSION['id_cliente'])): ?>
-                                <button type="submit" class="btn btn-amarillo">Reservar viaje</button>
-                            <?php else: ?>
-                                <button type="button" class="btn btn-amarillo" data-bs-toggle="modal" data-bs-target="#loginModal">Inicia sesión para reservar</button>
-                            <?php endif; ?>
-
-
-
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
 
 
 
