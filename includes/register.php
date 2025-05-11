@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validar que las contraseñas coincidan
     if ($password != $confirmPassword) {
         $_SESSION['error'] = "Las contraseñas no coinciden.";
-        header("Location: register.php");
+        header("Location: ../index.php");
         exit();
     }
 
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute([$email]);
     if ($stmt->rowCount() > 0) {
         $_SESSION['error'] = "El correo electrónico ya está registrado.";
-        header("Location: register.php");
+        header("Location: ../index.php");
         exit();
     }
 
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Redirigir al login después de registrar
     $_SESSION['success'] = "Registro exitoso. Inicia sesión.";
-    header("Location: login.php");
+    header("Location: ../index.php");
     exit();
 }
 ?>

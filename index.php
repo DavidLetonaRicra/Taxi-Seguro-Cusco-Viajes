@@ -65,9 +65,20 @@ $clienteLogueado = isset($_SESSION['user']);
             </nav>
 
 
+        <!-- Aquí puedes mostrar un mensaje de éxito -->
+        <?php if (isset($_SESSION['login_success'])): ?>
+            <div class="alert alert-success mt-3" role="alert">
+                ¡Inicio de sesión exitoso! Bienvenido de nuevo.
+            </div>
+        <?php unset($_SESSION['login_success']); ?>
+        <?php endif; ?>
 
-
-
+        <?php if (isset($_SESSION['success'])): ?>
+            <div class="alert alert-success mt-3 text-center" role="alert">
+                <?php echo $_SESSION['success']; ?>
+            </div>
+            <?php unset($_SESSION['success']); ?>
+         <?php endif; ?>
 
 
     <?php
@@ -235,6 +246,10 @@ $clienteLogueado = isset($_SESSION['user']);
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+
+
 </body>
 
 

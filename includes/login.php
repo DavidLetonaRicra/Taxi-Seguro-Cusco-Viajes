@@ -15,12 +15,16 @@ session_start();
 
                 if ($user) {
                     if (password_verify($password, $user['password'])) {
-                    $_SESSION['user'] = [
+                        $_SESSION['user'] = [
                             'id' => $user['id_cliente'],
                             'nombres' => $user['nombres'],
                             'apellidos' => $user['apellidos'],
-                            'email' => $user['email']
+                            'email' => $user['email'],
+                            'telefono' => $user['telefono'] // última línea no necesita coma
                         ];
+
+                    // Establecer mensaje de éxito en la sesión
+                        $_SESSION['login_success'] = true;
 
 
                         header("Location: ../index.php");

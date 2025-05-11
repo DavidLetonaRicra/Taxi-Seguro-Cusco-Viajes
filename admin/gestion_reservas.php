@@ -50,6 +50,7 @@ $reservas = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <thead class="bg-primary text-white">
             <tr>
                 <th>ID</th>
+                <th>Cliente</th> <!-- Nueva columna -->
                 <th>Origen</th>
                 <th>Destino</th>
                 <th>Fecha</th>
@@ -64,6 +65,7 @@ $reservas = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php foreach ($reservas as $reserva): ?>
             <tr>
                 <td><?= $reserva['id_reserva'] ?></td>
+                <td><?= 'Usuario #' . $reserva['id_reserva'] ?></td>
                 <td><?= htmlspecialchars($reserva['origen']) ?></td>
                 <td><?= htmlspecialchars($reserva['destino']) ?></td>
                 <td><?= $reserva['fecha_reserva'] ?></td>

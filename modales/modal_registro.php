@@ -7,7 +7,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="includes/register.php" method="POST">
+                <!-- Mostrar mensaje de error si es necesario -->
+                <div id="error-message" class="alert alert-danger" style="display: none;">
+                    Las contraseñas no coinciden. Por favor, revisa e intenta de nuevo.
+                </div>
+
+                <form action="includes/register.php" method="POST" id="registerForm">
                     <!-- Nombres -->
                     <div class="mb-3">
                         <label for="registerNombres" class="form-label">Nombres</label>
@@ -40,7 +45,7 @@
                     </div>
                     <!-- Botón de Registro -->
                     <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-amarillo">Registrar</button>
+                        <button type="submit" class="btn btn-amarillo" id="submitBtn">Registrar</button>
                     </div>
                 </form>
                 <hr>
@@ -49,3 +54,25 @@
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('#registerForm');
+    const errorMessage = document.querySelector('#error-message');
+    const submitButton = document.querySelector('#submitBtn');
+
+    form.addEventListener('submit', function (e) {
+        const password = document.getElementById('registerPassword').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+
+        if (password !== confirmPassword) {
+            e.preventDefault(); // Evita que el formulario se envíe
+            errorMessage.style.display = 'block'; // Muestra el mensaje de error
+            submitButton.setAttribute("disabled", "true"); // Desactiva el botón de registro
+        } else {
+            errorMessage.style.display = 'none'; // Oculta el mensaje de error si las contraseñas son iguales
+            submitButton.removeAttribute("disabled"); // Activa el botón de registro
+        }
+    });
+});
+</script>
